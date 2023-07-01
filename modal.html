@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--font awsome-->
+    <script src="https://kit.fontawesome.com/96b3a45a95.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--material Icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Modal</title>
+</head>
+<body>
+    <h1 class="center pink-text" >Modals</h1>
+    <div class=" divider"></div>
+    <div class="container">
+<div class="row">
+    <div class="col s12 m9">
+        <p>Use a modal for dialog boxes, confirmation messages, or other content that can be called up. In order for the modal to work you have to add the Modal ID to the link of the trigger. To add a close button, just add the class .modal-close to your button.</p>
+<br>
+<!--Modal trigger-->
+<a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+<!-- Modal Structure -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <div  class="row">
+        <div class="col s12">
+            <div class="card">
+                <div class="card-image">
+                    <img src="/images/f1.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="col s12">
+            <h2 class="pink-text">Modal Header</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae soluta minima at perferendis incidunt quia dolore amet obcaecati magnam labore? Accusantium distinctio quos reiciendis optio magnam porro, quas vel adipisci.</p>
+        </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Disagree</a>
+
+</div>
+</div>
+<!--modals with fixed footer-->
+<h2 class="pink-text">Modals with Fixed Footer</h2>
+<!--modal-trigger-->
+<a class="waves-effect waves-light btn modal-trigger" href="#modal2">Modal with fixed footer</a>
+  <!-- Modal Structure -->
+  <div id="modal2" class="modal modal-fixed-footer">
+    <div class="modal-content">
+        <div class="card">
+            <div class="card-image">
+                <img src="/images/f2.jpg" alt="" class="responsive-img">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s6">
+                <h3 class="pink-text">Modal Header</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo rem et culpa quis dolore placeat iusto recusandae totam eos deserunt, ab modi fuga excepturi laborum quae tempore repudiandae, enim odit, voluptatem illum corrupti? Maxime iste nobis quidem libero eos! Dolorem nam ut earum accusamus officia cupiditate laudantium harum numquam error?</p>
+            </div>
+            <div class="col s6">
+                <img src="/images/f3.jpg" alt="" class="responsive-img">
+            </div>
+            <div class="col s6">
+                <img src="/images/f4.jpg" alt="" class="responsive-img">
+            </div>
+            <div class="col s6">
+                <h3 class="pink-text">Modal Header</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad inventore dolorum modi fugiat necessitatibus nobis expedita ipsum ducimus debitis, totam quia magnam asperiores laborum id saepe molestiae veritatis at quibusdam. Excepturi voluptatem cumque cupiditate, libero nobis deleniti, magnam recusandae aliquid perspiciatis officia sequi dolore minus dignissimos quia quasi cum harum.</p>
+            </div> 
+     </div>          
+     </div>
+     <div class="modal-footer">
+        <a href="class=modal-close waves-effect waves-green btn-flat pink-text"> Click Here</a>
+     </div>
+    </div> 
+     <!--bottom sheet modals-->
+     <h3 class="pink-text"> Bottom Sheet Modals</h3>  
+     <a class="waves-effect waves-light btn modal-trigger" href="#modal3">Modal bottom sheet style</a>
+
+     <!-- Modal Structure -->
+     <div id="modal3" class="modal bottom-sheet">
+       <div class="modal-content">
+        <div class="row">
+            <div class="col6">
+                <div class="input-field">
+                    <form action="">
+                        <input type="text" class="datepicker" placeholder=" End date of training">   
+                        <label for="date">date</label>             
+                    </form>
+                </div>
+            </div>
+        </div> 
+        <div class="col6">
+          <div class="input-field">
+              <form action="">
+                  <input type="text" class="timepicker" placeholder="Assessmenr Time">   
+                  <label for="date">Time</label>             
+              </form>
+        </div>      
+       </div>     
+     </div>
+             
+    </div>
+  </div>
+</div>
+
+    
+    <div style="height:1000px;"></div>
+    <!--jquery cdm--> 
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+     <!-- Compiled and minified JavaScript -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> 
+     <script>
+      $(document).ready(function(){
+$('.modal').modal({
+opacity:0.8
+});
+$('.datepicker').datepicker();
+//time picker init
+$('.timepicker').timepicker();
+      });
+     </script>
+        
+</body>
+</html>

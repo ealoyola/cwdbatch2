@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--font awsome-->
+    <script src="https://kit.fontawesome.com/96b3a45a95.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--material Icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Navbar&Sidenav</title>
+</head>
+<body>
+    <div class="navbar-fixed">
+        <nav class="pink darken-3">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a href="#" class="brand-logo">Cummings-Emand</a>
+                    <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i>
+                    </a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                      <li><a href="navbar-sidenav.html">Home</a></li>
+                      <li><a href="index.html">About</a></li>
+                      <li>
+                        <a href="https://materializecss.com/icons.html" target="_self">Material Icons</a>
+                      </li>
+                      <li>
+                        <a href="" class="dropdown-trigger" data-target="dropdown-menu">
+                            <!--<i class="material-icons right">arrow_drop_down
+                            </i>
+                            -->
+                            <i class="fa-brands fa-js"></i>
+                            
+                        </a>     
+                    </li>
+                    </ul>
+                  </div>
+            </div>
+        </nav>
+        <!--dropdown structure-->
+        <ul id="dropdown-menu" class="dropdown-content">
+            <li>
+                <a href="https://react.dev/" target="_blank">
+                    <i class="fa-brands fa-node-js"></i>
+                    java script</a>
+            </li>
+            <li>
+                <a href="https://react.dev/" target="_blank">
+                    <i class="fa-brands fa-node-js"></i>
+                    react
+                </a>
+            </li>
+            <li>
+                <a href="https://nodejs.org/en" TARGET="_blank">
+                    <i class="fa-brands fa-node-js"></i>
+                    nodejs</a>
+            </li>
+        </ul>
+    </div>
+    <!--sidenav structure-->
+    <ul id="slide-out" class="sidenav">
+        <li>
+            <div class="user-view">
+                <div class="background">
+                    <img src="images/f1.jpg" alt="">
+                </div>
+                <a href="">
+                    <img src="images/f2.jpg" alt="" class="circle">
+                </a>
+                <a href="">
+                    <span class="white-text name">Muriel Murill
+                    </span>
+                </a>
+                <a href="">
+                    <span class="white-text email">Muriel_Murill@gmail.com
+
+                    </span>
+
+                </a>
+                
+            </div>
+        </li>
+        <li><a href="navbar-sidenav.html">Home</a></li>
+        <li><a href="index.html">About</a></li>
+        <li>
+          <a href="https://materializecss.com/icons.html" target="_self">Material Icons</a>
+        </li>
+        <li>
+
+    </ul>
+
+
+<!--Jquery-->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+ <!-- Compiled and minified JavaScript -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>     
+ <script>
+    $(document).ready(function(){
+        //dropdown init
+        $('.dropdown-trigger').dropdown();
+        //sidenav init
+        $('.sidenav').sidenav();
+    });
+ </script>
+    
+</body>
+</html>
